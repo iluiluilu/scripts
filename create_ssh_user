@@ -1,0 +1,6 @@
+sudo adduser newuser
+sudo usermod -aG sudo newuser
+su - newuser
+mkdir ~/.ssh
+vim ~/.ssh/authorized_keys
+ssh -i path_to_your_ssh_private_key newuser@server_address
