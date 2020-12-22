@@ -11,3 +11,10 @@ sudo certbot certonly --standalone -d example.com  -d www.example.com
 # Renew
 crontab -e
 0 2 * * * sudo service nginx stop && sudo /usr/bin/certbot renew && sudo service nginx start
+
+
+# Show the list of certificates
+certbot certificates
+
+# Remove certificates for a given domain
+sudo certbot delete --cert-name $mydomain
